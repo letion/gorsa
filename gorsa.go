@@ -1,7 +1,7 @@
 package gorsa
 
 // 公钥加密
-func PublicEncrypt(data, publicKey string) ([]byte, error) {
+func PublicEncrypt(data []byte, publicKey string) ([]byte, error) {
 
 	grsa := RSASecurity{}
 	grsa.SetPublicKey(publicKey)
@@ -15,7 +15,7 @@ func PublicEncrypt(data, publicKey string) ([]byte, error) {
 }
 
 // 私钥加密
-func PriKeyEncrypt(data, privateKey string) ([]byte, error) {
+func PriKeyEncrypt(data []byte, privateKey string) ([]byte, error) {
 
 	grsa := RSASecurity{}
 	grsa.SetPrivateKey(privateKey)
